@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pylab as pl
 import numpy as np
+from sklearn.metrics import r2_score
 from sklearn import linear_model
 
 filename = "FuelConsumptionCo2.csv"
@@ -81,8 +82,6 @@ plt.xlabel("Engine size")
 plt.ylabel("Emission")
 
 #plt.show()
-
-from sklearn.metrics import r2_score
 
 # create a numpy array for dependent and independent variables from test dataframe
 test_x = np.asanyarray(test[['ENGINESIZE']])
